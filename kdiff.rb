@@ -5,21 +5,21 @@
 class Kdiff < Formula
   desc "Fast directory comparison and interactive HTML diff report CLI tool"
   homepage "https://github.com/ivanlunardi/kdiff"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ivanlunardi/kdiff/releases/download/v1.0.2/kdiff_1.0.2_darwin_amd64.tar.gz"
-      sha256 "b5f00e7c259546e1948363065211610a4e7f5e7444d67947e94fa2bedb5712c2"
+      url "https://github.com/ivanlunardi/kdiff/releases/download/v1.0.3/kdiff_1.0.3_darwin_amd64.tar.gz"
+      sha256 "3653714ba018d9156e0545dd38cef768aefd9ed7c3a002db934ade6cac42f684"
 
       define_method(:install) do
         bin.install "kdiff"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ivanlunardi/kdiff/releases/download/v1.0.2/kdiff_1.0.2_darwin_arm64.tar.gz"
-      sha256 "4647de4a35e4bce0df0d286359ee72279447aa343a74b41563af1f21160ce68c"
+      url "https://github.com/ivanlunardi/kdiff/releases/download/v1.0.3/kdiff_1.0.3_darwin_arm64.tar.gz"
+      sha256 "d37f993fd5ba55de6116cbf1c26fdd8a3bf44ac0c1790d36ece17a0df2a956d3"
 
       define_method(:install) do
         bin.install "kdiff"
@@ -29,15 +29,15 @@ class Kdiff < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ivanlunardi/kdiff/releases/download/v1.0.2/kdiff_1.0.2_linux_amd64.tar.gz"
-      sha256 "641bf6b12d6961a1f4066e321e5dfc31d3a55066cc0b556eb2bb41cdf30aa52e"
+      url "https://github.com/ivanlunardi/kdiff/releases/download/v1.0.3/kdiff_1.0.3_linux_amd64.tar.gz"
+      sha256 "142180b71f36c9bebd334a4eef30350cc13106cc19f192fa14fe892d8978773b"
       define_method(:install) do
         bin.install "kdiff"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ivanlunardi/kdiff/releases/download/v1.0.2/kdiff_1.0.2_linux_arm64.tar.gz"
-      sha256 "3ad93a12dd34f52e4277272f54ebf633cbea3a12b721745c6b70e0143ad0ae8e"
+      url "https://github.com/ivanlunardi/kdiff/releases/download/v1.0.3/kdiff_1.0.3_linux_arm64.tar.gz"
+      sha256 "85e7bd2f51fbb5dc69863631d5838e38b22df8997cab216f390afff7f1f32fef"
       define_method(:install) do
         bin.install "kdiff"
       end
